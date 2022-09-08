@@ -8,20 +8,60 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
+        task9();
+        task10();
 
+    }
+
+    private static void task10() {
+        System.out.println("Задание 9.");
+        int number = 0;
+        int i = 0;
+        while (number < 20) {
+            i++;
+            number = i * 2;
+            System.out.printf("%d * 2 = %d \n", i, number);
+        }
+    }
+
+    private static void task9() {
+        System.out.println("Задание 8.");
+        int year = 0;
+        while (year < 2122) {
+            year += 79;
+            if (year >= 1822 && year <= 2022) {
+                System.out.printf("Комета пролетала рядом с Землей в %d году\n", year);
+            }
+            if (year > 2022 && year <= 2122){
+                System.out.printf("Комета пролетит рядом с Землей в %d году \n", year);
+            }
+        }
+    }
+
+    private static void task8() {
+        System.out.println("Задание 7.");
+        int friday = 2;
+        System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отче \n", friday);
+        while (friday < 31) {
+            friday += 7;
+            if (friday < 31) {
+                System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отче \n", friday);
+            }
+        }
     }
 
     private static void task7() {
         System.out.println("Задание 6.");
         int sum = 15_000;
-        for (int i = 1;sum <= 12_000_000;i++) {
+        int year = 9;
+        int month = 12;
+        for (int i = 1;i <= year*month;i++) {
             sum += sum * 0.07;
             if (i % 6 == 0) {
                 System.out.printf("Месяц %d, сумма накоплений равна %d рублей \n", i,sum);
             }
         }
-
-
     }
 
     private static void task6() {
